@@ -1,0 +1,17 @@
+name: Continuous Integration
+on: [on:
+       push:
+         branches:
+           - master]
+jobs:
+  buildStoryBook:
+    name: Build StoryBook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Script build StoryBook
+        run: npm build-storybook
+
+

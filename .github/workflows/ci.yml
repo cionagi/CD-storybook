@@ -1,0 +1,13 @@
+name: Continuous Integration
+on: [push]
+jobs:
+  buildAndTest:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Test
+        run: npm run test
+
