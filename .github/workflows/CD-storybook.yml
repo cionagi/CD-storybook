@@ -12,6 +12,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
-        run: npm deploy-storybook
+        run: npm run deploy-storybook
+
 
 
