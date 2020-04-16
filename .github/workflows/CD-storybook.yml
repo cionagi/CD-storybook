@@ -1,8 +1,8 @@
 name: CD Storybook
-on: [on:
-       push:
-         branches:
-           - master]
+on:
+  push:
+    branches:
+      - master
 jobs:
   buildStoryBook:
     name: Build StoryBook
