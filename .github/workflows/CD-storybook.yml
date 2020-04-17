@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     env: # Or as an environment variable
       SUPER_SECRET: ${{ secrets.GH_TOKEN }}
-      githubToken: ${{ secrets.githubToken }}
+      githubToken2: ${{ secrets.githubToken }}
       FIRST_NAME: Mona
       middle_name: The
       Last_Name: Octocat
@@ -17,4 +17,4 @@ jobs:
       - name: Hello world
         run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable=githubToken
+        run: npm run deploy-storybook -- --ci --host-token-env-variable=githubToken2
