@@ -1,19 +1,19 @@
 name: CD Storybook
-on:
-  push:
-    branches:
-      - master
+on: [push]
 jobs:
   buildStoryBook:
     name: Build StoryBook
     runs-on: ubuntu-latest
     env: # Or as an environment variable
-      GitHubToken2: ${{ secrets.GitHubToken2 }}
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
-      - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable="$ GitHubToken2"
-
-
+#      - name: Script build StoryBook
+#        run: npm run deploy-storybook -- --ci --host-token-env-variable=${GITHUB_TOKEN}
+      - name: Script build StoryBook 1
+        run: npm run deploy-storybook -- --ci --host-token-env-variable=${GH_TOKEN}
+      - name: Script build StoryBook 2
+        run: npm run deploy-storybook - --ci
