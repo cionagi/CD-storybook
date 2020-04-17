@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     env: # Or as an environment variable
       SUPER_SECRET: ${{ secrets.GH_TOKEN }}
+      githubToken: ${{ secrets.githubToken }}
       FIRST_NAME: Mona
       middle_name: The
       Last_Name: Octocat
