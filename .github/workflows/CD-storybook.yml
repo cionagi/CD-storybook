@@ -5,13 +5,10 @@ jobs:
     name: Build StoryBook
     runs-on: ubuntu-latest
     env: # Or as an environment variable
-#      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GT_TOKENN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable="$GT_TOKENN"
+        run: npm run deploy-storybook -- --ci --host-token-env-variable=$GT_TOKENN
