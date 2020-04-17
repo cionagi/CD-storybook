@@ -1,15 +1,14 @@
 name: CD Storybook
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   buildStoryBook:
     name: Build StoryBook
     runs-on: ubuntu-latest
-    env: # Or as an environment variable
-      SUPER_SECRET: ${{ secrets.GH_TOKEN }}
+    env:
       githubToken2: ${{ secrets.githubToken }}
-      FIRST_NAME: Mona
-      middle_name: The
-      Last_Name: Octocat
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
