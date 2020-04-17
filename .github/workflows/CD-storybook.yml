@@ -4,7 +4,7 @@ jobs:
   buildStoryBook:
     name: Build StoryBook
     runs-on: ubuntu-latest
-#    env: # Or as an environment variable
+    env: # Or as an environment variable
 #      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
