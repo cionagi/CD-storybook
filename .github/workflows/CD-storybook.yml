@@ -8,10 +8,10 @@ jobs:
     name: Build StoryBook
     runs-on: ubuntu-latest
     env: # Or as an environment variable
-      GitHubToken2: ${{ secrets.GitHubToken2 }}
+      GITHUB_TOKEN: ${{ secrets.GitHubToken2 }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable="$GitHubToken2"
+        run: npm run deploy-storybook -- --ci --host-token-env-variable="GITHUB_TOKEN"
