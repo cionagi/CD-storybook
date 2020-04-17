@@ -5,10 +5,15 @@ jobs:
     name: Build StoryBook
     runs-on: ubuntu-latest
     env: # Or as an environment variable
-      GT_TOKENN: ${{ secrets.GH_TOKEN }}
+      SUPER_SECRET: ${{ secrets.GH_TOKEN }}
+      FIRST_NAME: Mona
+      middle_name: The
+      Last_Name: Octocat
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
+      - name: Hello world
+        run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable=$GT_TOKENN
+        run: npm run deploy-storybook -- --ci --host-token-env-variable=$SUPER_SECRET
