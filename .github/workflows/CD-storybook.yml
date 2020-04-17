@@ -14,5 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable="$GITHUB_TOKEN"
+        run: npm run deploy-storybook -- --ci --host-token-env-variable=$GITHUB_TOKEN
+      - name: Docker login
+        run: echo ${GITHUB_TOKEN} | $GITHUB_TOKEN
         
