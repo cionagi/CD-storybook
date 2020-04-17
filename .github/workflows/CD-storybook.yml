@@ -8,7 +8,7 @@ jobs:
     name: Build StoryBook
     runs-on: ubuntu-latest
     env: # Or as an environment variable
-      GITHUB_TOKEN: ${{ secrets.GitHubToken2 }}
+      GITHUB_TOKEN: ${{ secrets.GitHubToken3 }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
