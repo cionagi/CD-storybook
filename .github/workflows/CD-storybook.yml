@@ -17,4 +17,4 @@ jobs:
       - name: Hello world
         run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci
+        run: npm run deploy-storybook -- --ci --host-token-env-variable=githubToken
