@@ -8,11 +8,20 @@ jobs:
 #      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
+      - name: Checkout 🛎️
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
         run: npm run deploy-storybook -- --ci
+      - name: Build and deploy to storybook-static branch
+          uses: JamesIves/github-pages-deploy-action@2.0.3
+          env:
+            ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: storybook-static
+            BUILD_SCRIPT: npm install && npm run build-storybook
+
 
 
 
