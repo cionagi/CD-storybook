@@ -1,5 +1,6 @@
 ![CD Storybook](https://github.com/cionagi/CD-storybook/workflows/CD%20Storybook/badge.svg)
 ![Continuous Integration](https://github.com/cionagi/CD-storybook/workflows/Continuous%20Integration/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/212fcdb4-075b-4160-8a43-12c25ed84098/deploy-status)](https://app.netlify.com/sites/frosty-hypatia-a7127a/deploys)
 
 Hacer Auto deploy de StoryBook en Github Page usando:
 
