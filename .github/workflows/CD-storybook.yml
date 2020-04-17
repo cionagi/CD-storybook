@@ -12,7 +12,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable=${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy-storybook -- --ci
 
 
 
