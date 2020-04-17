@@ -8,10 +8,10 @@ jobs:
 #      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GT: ${{ secrets.GH_TOKEN }}
+      GT_TOKENN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
-        run: npm run deploy-storybook -- --ci --host-token-env-variable=$GT
+        run: npm run deploy-storybook -- --ci --host-token-env-variable="GT_TOKENN"
