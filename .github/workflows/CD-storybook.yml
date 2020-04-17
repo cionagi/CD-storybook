@@ -9,14 +9,8 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout 🛎️
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install
       - name: Script build StoryBook
         run: npm run deploy-storybook -- --ci
-
-
-
-
-
