@@ -1,7 +1,7 @@
 name: Continuous Integration
 on:
   pull_request:
-    types: [assigned, opened, synchronize, reopened]
+    types: [opened, synchronize, reopened]
 jobs:
   buildAndTest:
     name: Build and Test
